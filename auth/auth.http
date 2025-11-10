@@ -1,0 +1,18 @@
+### Créer un utilisateur API
+POST http://localhost:1337/api/auth/local/register
+Content-Type: application/json
+
+{
+  "username": "toto",
+  "email": "toto@example.com",
+  "password": "test1234"
+}
+
+### connecter pour obtenir le JWT
+POST http://localhost:1337/api/auth/local
+Content-Type: application/json
+
+{
+  "identifier": "toto@example.com",
+  "password": "test1234"
+}

@@ -55,7 +55,7 @@ npm run develop
 ```bash
 npm run start
 ```
-2. Compile l’application Strapi pour le déploiement
+2. Compile l’application Strapi pour le déploiement  
 ```bash
 npm run build
 ```

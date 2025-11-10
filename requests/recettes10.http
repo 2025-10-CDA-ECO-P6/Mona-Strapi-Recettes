@@ -1,0 +1,139 @@
+### 1
+POST http://localhost:1337/api/recettes
+Content-Type: application/json
+
+{
+  "data": {
+    "titre": "Tarte aux pommes maison",
+    "temps_preparation": 35,
+    "difficulte": 2,
+    "budget": 1,
+    "description": "Une tarte classique à base de pommes, sucre et cannelle."
+  }
+}
+
+### 2
+POST http://localhost:1337/api/recettes
+Content-Type: application/json
+
+{
+  "data": {
+    "titre": "Gratin dauphinois",
+    "temps_preparation": 50,
+    "difficulte": 3,
+    "budget": 2,
+    "description": "Pommes de terre fondantes, crème et muscade, gratinées au four."
+  }
+}
+
+### 3
+POST http://localhost:1337/api/recettes
+Content-Type: application/json
+
+{
+  "data": {
+    "titre": "Omelette aux fines herbes",
+    "temps_preparation": 10,
+    "difficulte": 1,
+    "budget": 1,
+    "description": "Une omelette simple avec persil, ciboulette et un soupçon d’ail."
+  }
+}
+
+### 4
+POST http://localhost:1337/api/recettes
+Content-Type: application/json
+
+{
+  "data": {
+    "titre": "Poulet basquaise",
+    "temps_preparation": 60,
+    "difficulte": 3,
+    "budget": 3,
+    "description": "Poulet mijoté dans une sauce aux poivrons, tomates et oignons."
+  }
+}
+
+### 5
+POST http://localhost:1337/api/recettes
+Content-Type: application/json
+
+{
+  "data": {
+    "titre": "Soupe de potiron",
+    "temps_preparation": 25,
+    "difficulte": 1,
+    "budget": 1,
+    "description": "Une soupe onctueuse de potiron, légèrement relevée de crème et noix de muscade."
+  }
+}
+
+### 6
+POST http://localhost:1337/api/recettes
+Content-Type: application/json
+
+{
+  "data": {
+    "titre": "Lasagnes bolognaises",
+    "temps_preparation": 90,
+    "difficulte": 3,
+    "budget": 3,
+    "description": "Pâtes, sauce tomate et viande hachée gratinées au four avec une béchamel."
+  }
+}
+
+### 7
+POST http://localhost:1337/api/recettes
+Content-Type: application/json
+
+{
+  "data": {
+    "titre": "Salade niçoise",
+    "temps_preparation": 20,
+    "difficulte": 1,
+    "budget": 2,
+    "description": "Salade colorée avec thon, œufs durs, olives et haricots verts."
+  }
+}
+
+### 8
+POST http://localhost:1337/api/recettes
+Content-Type: application/json
+
+{
+  "data": {
+    "titre": "Crêpes sucrées",
+    "temps_preparation": 15,
+    "difficulte": 1,
+    "budget": 1,
+    "description": "Des crêpes légères à déguster avec sucre, confiture ou pâte à tartiner."
+  }
+}
+
+### 9
+POST http://localhost:1337/api/recettes
+Content-Type: application/json
+
+{
+  "data": {
+    "titre": "Bœuf bourguignon",
+    "temps_preparation": 180,
+    "difficulte": 4,
+    "budget": 3,
+    "description": "Ragoût de bœuf mijoté au vin rouge avec carottes et oignons."
+  }
+}
+
+### 10
+POST http://localhost:1337/api/recettes
+Content-Type: application/json
+
+{
+  "data": {
+    "titre": "Riz au lait vanillé",
+    "temps_preparation": 40,
+    "difficulte": 2,
+    "budget": 1,
+    "description": "Dessert crémeux à base de riz, lait et vanille."
+  }
+}

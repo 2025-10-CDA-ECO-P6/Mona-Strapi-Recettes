@@ -1,0 +1,41 @@
+### Obtenir la liste de toutes les recettes
+GET http://localhost:1337/api/recettes
+Content-Type: application/json
+
+
+### Obtenir une recette précise (documentId)
+GET http://localhost:1337/api/recettes/p2h48oas0ky58fqxv59h6uct
+Content-Type: application/json
+
+
+### Créer une nouvelle recette 
+POST http://localhost:1337/api/recettes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYyNzcxMjg0LCJleHAiOjE3NjUzNjMyODR9.ig6Z_q5JQfa_LJBtK4sqPWNwclAC-adH2qLK5vmHADM
+
+{
+  "data": {
+    "titre": "Poulet au curry",
+    "temps_preparation": 30,
+    "difficulte": 2,
+    "budget": 2,
+    "description": "Un plat simple à base de poulet, oignons, crème et poudre de curry."
+  }
+}
+
+
+### Modifier une recette existante (documentId)
+PUT http://localhost:1337/api/recettes/p2h48oas0ky58fqxv59h6uct
+Content-Type: application/json
+
+{
+  "data": {
+    "budget": 3
+  }
+}
+
+
+### Supprimer une recette (documentId)
+DELETE http://localhost:1337/api/recettes/wnrxapull7t9uoxv9oy7pc7c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYyNzcxMjg0LCJleHAiOjE3NjUzNjMyODR9.ig6Z_q5JQfa_LJBtK4sqPWNwclAC-adH2qLK5vmHADM
