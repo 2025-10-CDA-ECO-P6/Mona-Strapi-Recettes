@@ -447,6 +447,7 @@ export interface ApiRecetteRecette extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
     difficulte: Schema.Attribute.Integer;
+    ingredients: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
