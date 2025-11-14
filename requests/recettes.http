@@ -38,13 +38,13 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxN
 }
 
 ### Mise à  jour ingredients d'une recette
-PUT http://localhost:1337/api/recettes/72
+PUT http://localhost:1337/api/recettes/sa9wsvo3p3b7wai96osljt06
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYyNzcxMjg0LCJleHAiOjE3NjUzNjMyODR9.ig6Z_q5JQfa_LJBtK4sqPWNwclAC-adH2qLK5vmHADM
 
 {
   "data": {
-    "ingredient": [2]
+    "ingredient": [4]
   }
 }
 
