@@ -26,8 +26,11 @@
     "description": {
       "type": "text"
     },
-    "ingredients": {
-      "type": "text"
+    "ingredient": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::ingredient.ingredient",
+      "mappedBy": "recettes"
     }
   }
 }

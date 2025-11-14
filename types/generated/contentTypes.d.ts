@@ -430,6 +430,35 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiIngredientIngredient extends Struct.CollectionTypeSchema {
+  collectionName: 'ingredients';
+  info: {
+    displayName: 'Ingredient';
+    pluralName: 'ingredients';
+    singularName: 'ingredient';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::ingredient.ingredient'
+    > &
+      Schema.Attribute.Private;
+    nom_ingredients: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    recettes: Schema.Attribute.Relation<'manyToMany', 'api::recette.recette'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiRecetteRecette extends Struct.CollectionTypeSchema {
   collectionName: 'recettes';
   info: {
@@ -447,7 +476,10 @@ export interface ApiRecetteRecette extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
     difficulte: Schema.Attribute.Integer;
-    ingredients: Schema.Attribute.Text;
+    ingredient: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::ingredient.ingredient'
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -973,6 +1005,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::ingredient.ingredient': ApiIngredientIngredient;
       'api::recette.recette': ApiRecetteRecette;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

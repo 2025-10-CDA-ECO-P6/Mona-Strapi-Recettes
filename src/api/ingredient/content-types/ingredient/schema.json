@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingredients",
+  "info": {
+    "singularName": "ingredient",
+    "pluralName": "ingredients",
+    "displayName": "Ingredient"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom_ingredients": {
+      "type": "string"
+    },
+    "recettes": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::recette.recette",
+      "inversedBy": "ingredient"
+    }
+  }
+}

@@ -2,6 +2,20 @@
 GET http://localhost:1337/api/recettes
 Content-Type: application/json
 
+### Obtenir la liste des ingrédients
+GET http://localhost:1337/api/ingredients
+Content-Type: application/json
+
+### Creer un ingredient
+POST http://localhost:1337/api/ingredients
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYyNzcxMjg0LCJleHAiOjE3NjUzNjMyODR9.ig6Z_q5JQfa_LJBtK4sqPWNwclAC-adH2qLK5vmHADM
+
+{
+  "data": {
+    "nom_ingredients": "Patatis"
+  }
+}
 
 ### Obtenir une recette précise (documentId)
 GET http://localhost:1337/api/recettes/p2h48oas0ky58fqxv59h6uct
@@ -23,6 +37,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxN
   }
 }
 
+### Mise à  jour ingredients d'une recette
+PUT http://localhost:1337/api/recettes/72
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzYyNzcxMjg0LCJleHAiOjE3NjUzNjMyODR9.ig6Z_q5JQfa_LJBtK4sqPWNwclAC-adH2qLK5vmHADM
+
+{
+  "data": {
+    "ingredient": [2]
+  }
+}
 
 ### Modifier une recette existante (documentId)
 PUT http://localhost:1337/api/recettes/p2h48oas0ky58fqxv59h6uct
